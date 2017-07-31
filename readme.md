@@ -22,3 +22,7 @@ Requirements
     - Hide the input.
     - Show the text block.
     - Update the text block with the new text.
+
+    1. Click text box
+    2. Hide text block/Display input field
+    3. Edit text and update
