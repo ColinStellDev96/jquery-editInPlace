@@ -1,3 +1,5 @@
+/* Overall Styling */
+
 body {
     font-family: 'Arial', sans-serif;
 }
@@ -16,28 +18,31 @@ p {
     display: inline-block;
 }
 
-#nameText {
-    min-height: 20px;
-    min-width: 100px;
-    border: .5px solid lightgrey;
-}
-
 .hidden {
     display:none;
 }
+
+/* Adds fixed width and height in case user erases text completely */
+
+#nameText {
+    min-height: 20px;
+    min-width: 100px;
+}
+
+#aboutText {
+    min-height: 20px;
+    min-width: 350px;
+}
+
+/* Keeps layout from breaking when user clicks into input fields */
 
 #nameInput {
     margin-top: 15px;
     margin-bottom: 23px;
 }
 
-#aboutTxt {
-    min-height: 20px;
-    min-width: 350px;
-    border: .5px solid lightgrey;
-}
-
-#aboutMeText {
+#aboutInput {
     margin-top: 15px;
     margin-bottom: 23px;
+    min-width: 350px;
 }

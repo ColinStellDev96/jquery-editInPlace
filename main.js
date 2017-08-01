@@ -1,39 +1,42 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
 /* Name Section */
 
     $('#nameText').on('click', function(){
-        $('#nameText').addClass('hidden');
-        $('#nameInput').removeClass('hidden');
-        $('#nameInput').trigger('focus');
-        $('#nameInput').val($('#nameText').text());
+        $('#nameInput').removeClass('hidden'); //input field is displayed
+        $('#nameText').addClass('hidden'); //original text is 'hidden"
+        $('#nameInput').trigger('focus'); //brings the blue focus border when input field is displayed
+        $('#nameInput').val($('#nameText').text()); // keeps original name text in input field for user to change
+
+        // user can now type new text.
     });
 
     $('#nameInput').on('blur', function(){
-        $('#nameText').removeClass('hidden');
-        $('#nameInput').addClass('hidden');
-        $('#nameText').text($('#nameInput').val());
+        $('#nameInput').addClass('hidden'); //input field is hidden
+        $('#nameText').removeClass('hidden'); // Original Browser text style comes back
+        $('#nameText').text($('#nameInput').val()); //changes the text value to new text from user
     });
 
-/* About Section */
+/* About Section */ // Same flow as Name Section
 
-    $('#aboutTxt').on('click', function(){
-        $('#aboutTxt').addClass('hidden');
-        $('#aboutMeText').removeClass('hidden');
-        $('#aboutMeText').trigger('focus');
-        $('#aboutMeText').val($('#aboutTxt').text());
+    $('#aboutText').on('click', function(){
+        $('#aboutInput').removeClass('hidden');
+        $('#aboutText').addClass('hidden');
+        $('#aboutInput').trigger('focus');
+        $('#aboutInput').val($('#aboutText').text());
     });
 
-    $('#aboutMeText').on('blur', function(){
-        $('#aboutTxt').removeClass('hidden');
-        $('#aboutMeText').addClass('hidden');
-        $('#aboutTxt').text($('#aboutMeText').val());
+    $('#aboutInput').on('blur', function(){
+        $('#aboutInput').addClass('hidden');
+        $('#aboutText').removeClass('hidden');
+        $('#aboutText').text($('#aboutInput').val());
     });
 
 });
 
+
 /* -=-=-=-= My First Try =-=-=-=-=-=*/
-// This works but has some weird styling issues.
+// This works overall, but has some weird styling issues.
 
 // $("body").on("click", ".editText", (function(){
 //     var $txtEd = $(this);
